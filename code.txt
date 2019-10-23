@@ -1,0 +1,55 @@
+CNN_LSTM_CTC/utils.py
+
+-----------------------------------------------------------
+
+Code:
+
+charset = '0123456789'
+encode_maps = {}
+decode_maps = {}
+for i, char in enumerate(charset, 1):
+    encode_maps[char] = i
+    decode_maps[i] = char
+
+SPACE_INDEX = 0
+SPACE_TOKEN = ''
+encode_maps[SPACE_TOKEN] = SPACE_INDEX
+decode_maps[SPACE_INDEX] = SPACE_TOKEN
+
+-----------------------------------------------------------
+
+Result:
+
+print(encode_maps):
+    {'': 0, '0': 1, '1': 2, '2': 3, '3': 4, '4': 5, '5': 6, '6': 7, '7': 8, '8': 9, '9': 10} 
+
+print(decode_maps):
+    {0: '', 1: '0', 2: '1', 3: '2', 4: '3', 5: '4', 6: '5', 7: '6', 8: '7', 9: '8', 10: '9'}
+
+-----------------------------------------------------------
+
+Code:
+
+#image is named as /.../<folder>/0000_abcd.png
+
+code = image_name.split('/')[-1].split('_')[1].split('.')[0] #abcd
+    code = [SPACE_INDEX if code == SPACE_TOKEN else encode_maps[c] for c in list(code)]
+    self.labels.append(code)
+
+-----------------------------------------------------------
+
+Result:
+
+print(code):
+    [2, 3, 4]
+
+-----------------------------------------------------------
+CTC beam search 가 output node 라는 말이 있음
+
+Issue with CTC Beam Search and Tensorflow C++ API
+
+URL:https://stackoverflow.com/questions/48883234/issue-with-ctc-beam-search-and-tensorflow-c-api
+
+
+
+        
