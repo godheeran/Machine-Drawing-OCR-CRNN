@@ -27,3 +27,5 @@ batchNormalization layer의 node name을 변경하면서 .pb로 만드는 스크
 
 - ./drawing_ocr
 학습된 모델을 이용하여 도면상의 ocr을 진행
+
+![](https://github.com/godheeran/Imagebased_crnn_tensorflow/imgs/output.png)
