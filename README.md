@@ -10,7 +10,9 @@ The training network is CRNN with CTC loss layer.
 
 - help.py 
 데이터베이스를 train과 val 랜덤 분할해주는 스크립트
-EX) 1.png .... 10000.png / labels.txt(폴더 밖에 위치)
+EX)
+1.png .... 10000.png
+labels.txt(폴더 밖에 위치)
 
 - utils.py
 학습에 대한 파라미터를 가지고 있는 스크립트
