@@ -15,7 +15,7 @@ EX) 1.png .... 10000.png / labels.txt(폴더 밖에 위치)
 - utils.py
 학습에 대한 파라미터를 가지고 있는 스크립트
 
--cnn_lstm_otc.py
+- cnn_lstm_otc.py
 directional lstm cell (2stacks)로 구성된 네트워크
 
 - cnn_blstm_otc_ocr.py
